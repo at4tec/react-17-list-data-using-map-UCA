@@ -1,9 +1,9 @@
 import React from 'react';
 
+//child
+function Items(props) {
 
-function Items(pr) {
-
-  const {id,name,age}=pr
+  const {id,name,age}=props
 return(
   <ol>
     <li>{id}</li>
@@ -14,7 +14,7 @@ return(
   )
 }
 
-
+//parent
 function App () {
   return (
 <>
