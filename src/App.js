@@ -1,9 +1,9 @@
 import React from 'react';
 
 //child
-function Items(props) {
-
-  const {id,name,age}=props
+class  Items extends React.Component {
+render(){
+  const {id,name,age}=this.props
 return(
   <ol>
     <li>{id}</li>
@@ -13,17 +13,22 @@ return(
   </ol>
   )
 }
-
+}
 //parent
-function App () {
+class App extends React.Component {
+      state={ 
+        items:[
+    {id:'1',name:'ahmed',age:'31'},
+    {id:'2',name:'aly',age:'22'}
+  ]}
+render(){
   return (
 <>
   --List items:-
-  <Items id='1' name='ahmed' age='31' />
-  <Items id='2' name='aly' age='22' />
+  <Items items={this.state.items} />
 
 </>
 );
 }
-
+}
 export default App;
