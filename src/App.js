@@ -4,6 +4,7 @@ import React from 'react';
 class  Items extends React.Component {
 render(){
   const {id,name,age}=this.props.items
+  
 return(
   <ol>
     <li>{id}</li>
@@ -14,19 +15,21 @@ return(
   )
 }
 }
+
+
 //parent
 class App extends React.Component {
       state={ 
        items:
-    {id:'1',name:'ahmed',age:'31'},
-    items:
-    {id:'2',name:'ahmed',age:'31'}
+    [{id:'1',name:'ahmed',age:'31'},
+       {id:'2',name:'aly',age:'36'}]
   }
 render(){
   return (
 <>
   --List items:-
-  <Items items={this.state.items} />
+  <Items items={this.state.items[0]} />
+  <Items items={this.state.items[1]} />
 
 </>
 );
