@@ -3,7 +3,7 @@ import React from 'react';
 //child
 class  Items extends React.Component {
 render(){
-  const {id,name,age}=this.props
+  const {id,name,age}=this.props.items
 return(
   <ol>
     <li>{id}</li>
@@ -17,10 +17,11 @@ return(
 //parent
 class App extends React.Component {
       state={ 
-        items:[
+       items:
     {id:'1',name:'ahmed',age:'31'},
-    {id:'2',name:'aly',age:'22'}
-  ]}
+    items:
+    {id:'2',name:'ahmed',age:'31'}
+  }
 render(){
   return (
 <>
