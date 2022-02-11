@@ -3,15 +3,18 @@ import React from 'react';
 //child
 class  Items extends React.Component {
 render(){
-  const {id,name,age}=this.props.items
+  const {items}=this.props
+const theitems=items.map(e=>{
   
-return(
-  <ol>
-    <li>{id}</li>
-    <li>{name}</li>
-    <li>{age}</li>
+  return<ol>
+    <li>{e.id}</li>
+    <li>{e.name}</li>
+    <li>{e.age}</li>
 
   </ol>
+})
+return(
+<>{theitems}</>
   )
 }
 }
@@ -28,8 +31,7 @@ render(){
   return (
 <>
   --List items:-
-  <Items items={this.state.items[0]} />
-  <Items items={this.state.items[1]} />
+  <Items items={this.state.items} />
 
 </>
 );
