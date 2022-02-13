@@ -4,7 +4,7 @@ import React from 'react';
 class  Items extends React.Component {
 render(){
   const {items}=this.props
-  const i=items.map(e=>(
+  const i=items.map(e=>
     <ol>
     <li>{e.id}</li>
     <li>{e.name}</li>
@@ -12,7 +12,7 @@ render(){
 
   </ol>
 
-  ))
+  )
 return(
 <>{i}</>
   )
