@@ -4,17 +4,17 @@ import React from 'react';
 class  Items extends React.Component {
 render(){
   const {items}=this.props
-const theitems=items.map(e=>{
-  
-  return<ol>
+  const i=items.map(e=>(
+    <ol>
     <li>{e.id}</li>
     <li>{e.name}</li>
     <li>{e.age}</li>
 
   </ol>
-})
+
+  ))
 return(
-<>{theitems}</>
+<>{i}</>
   )
 }
 }
@@ -32,6 +32,7 @@ render(){
 <>
   --List items:-
   <Items items={this.state.items} />
+
 
 </>
 );
