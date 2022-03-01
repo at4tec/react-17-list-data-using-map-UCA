@@ -1,24 +1,5 @@
 import React from 'react';
 
-//child
-class  Items extends React.Component {
-render(){
-  const {items}=this.props
-  const i=items.map(e=>
-    <ol>
-    <li>{e.id}</li>
-    <li>{e.name}</li>
-    <li>{e.age}</li>
-
-  </ol>
-
-  )
-return(
-<>{i}</>
-  )
-}
-}
-
 
 //parent
 class App extends React.Component {
@@ -38,4 +19,26 @@ render(){
 );
 }
 }
+
+
+//child
+class  Items extends React.Component {
+  render(){
+    const items=this.props.items
+    const i=items.map(e=>
+      <ol>
+      <li>{e.id}</li>
+      <li>{e.name}</li>
+      <li>{e.age}</li>
+  
+    </ol>
+  
+    )
+  return(
+  <>{i}</>
+    )
+  }
+  }
+  
+  
 export default App;
